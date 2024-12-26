@@ -113,4 +113,11 @@ INNER JOIN sales s2
 ON s1.category = s2.category
 AND s1.product_name <> s2.product_name;
 
+--Aggregate Functions
+SELECT category,SUM(quantity * unit_price) AS total_revenue
+FROM sales
+WHERE sale_date >= '2024-12-01' -- Only include sales after this date
+GROUP BY category
+HAVING SUM(quantity) > 10 -- Include categories with total quantity sold > 10
+ORDER BY total_revenue DESC; -- Sort by total revenue in descending order
 
