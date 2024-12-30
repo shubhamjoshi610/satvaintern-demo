@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, select, button {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#form-feedback {
+    font-weight: bold;
+    color: green;
+}
